@@ -4,68 +4,44 @@ class Form{
     }
 
     display(){
-        /* var button = createButton("View");
-        button.position("100%", "100%"); */
 
-        //button for div
-        var button1 = document.createElement("BUTTON");
-        button1.id = "Button1";
-        var text1 = document.createTextNode("Click me");
-        button1.appendChild(text1);
-        document.body.appendChild(button1);
+        //Creating Chat Button "+"
+        var chatButton = document.createElement("BUTTON");
+        chatButton.id = "ChatButton";
+        var text1 = document.createTextNode("+");
+        chatButton.appendChild(text1);
+        document.body.appendChild(chatButton);
 
-        //div
+        //DIV 1
         var div = document.createElement('div');
         div.id = "div1";
-        div.innerHTML = "Chat";
+        div.innerHTML = "Chat, *Important message*: The buttons are not functing right now.";
         document.body.appendChild(div);
-        //adding button1 to div
-        div.appendChild(button1);
+        //Adding Chat Button to DIV 1
+        div.appendChild(chatButton);
         
+        //Creating "Start Sharing Location" Button
+        var findButton = document.createElement("BUTTON");
+        findButton.id = "FindButton";
+        var text1 = document.createTextNode("Start Sharing Location");
+        findButton.appendChild(text1);
+        document.body.appendChild(findButton);
+
+        //Creating DIV 2
         var divTwo = document.createElement('div');
         divTwo.id = "div2";
-        divTwo.innerHTML = "Make New Friends";
+        divTwo.innerHTML = "Find nearby";
         document.body.appendChild(divTwo);
+        //Adding Chat Button to DIV 1
+        divTwo.appendChild(findButton);
 
-        var divThree = document.createElement('div');
-        divThree.id = "div3";
-        divThree.innerHTML = "(nothing)";
-        document.body.appendChild(divThree);
-
-        var buttonPlay = document.createElement("BUTTON");
-        buttonPlay.id = "ButtonPlay";
-        var text1 = document.createTextNode("Play now");
-        buttonPlay.appendChild(text1);
-        document.body.appendChild(buttonPlay);
-
-        var divFour = document.createElement('div');
-        divFour.id = "div4";
-        divFour.innerHTML = "play a game";
-        document.body.appendChild(divFour);
-        //creating a button
-        divFour.appendChild(ButtonPlay);
-
-        //div for chatbox
-        document.getElementById("container").style.display = "none";
-
-        //what to do when we press the button1
-        document.getElementById("Button1").onclick = function() {
+        //Task to perform when we press "+"
+        document.getElementById("ChatButton").onclick = function() {
             document.getElementById("div1").style.display = "none";
             document.getElementById("div2").style.display = "none";
-            document.getElementById("div3").style.display = "none";
-            document.getElementById("div4").style.display = "none";
-            document.getElementById("Button1").style.display = "none";
-        };
-
-        document.getElementById("ButtonPlay").onclick = function() {
-            document.getElementById("div1").style.display = "none";
-            document.getElementById("div2").style.display = "none";
-            document.getElementById("div3").style.display = "none";
-            document.getElementById("div4").style.display = "none";
-            document.getElementById("Button1").style.display = "none";
-            document.getElementById("ButtonPlay").style.display = "none";
-            boy.visible = true;
-            girl.visible = true;
+            document.getElementById("ChatButton").style.display = "none";
+            logo.visible = false;            
+            chatBackground.visible = true;
         };
     }
 }

@@ -3,7 +3,8 @@ var form;
 
 function preload(){
     backgroundImage = loadImage("bg.png");
-    logoImage = loadImage("logo.png")
+    logoImage = loadImage("logo.png");
+    chatBackgroundImage = loadImage("connectKidsBackground.png")
 }
 
 function setup(){
@@ -11,6 +12,10 @@ function setup(){
 
     logo = createSprite(490, 60);
     logo.addImage(logoImage)
+
+    chatBackground = createSprite(520,500);
+    chatBackground.addImage(chatBackgroundImage);
+    chatBackground.visible = false;
 
     form = new Form();
     form.display();
